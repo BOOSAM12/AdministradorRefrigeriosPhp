@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+10&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+:root {
+  --colorPrimero: #3f50d1;
+  --colorSegundo: #5c67dd;
+  --colorTercero: #787ee8;
+  --colorCuarto: #9594f4;
+  --colorCinco: #b1abff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  height: 100%;
+  width: 100%;
+}
+main {
+  width: 100%;
+  height: 90.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cont-formulario {
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+/* diseño de la tabla */
+
+table {
+  width: 100%;
+  padding: 20px;
+  border-collapse: separate;
+  border-spacing: 15px;
+}
+th {
+  border: 1px solid var(--colorPrimero);
+  padding: 10px;
+  border-radius: 15px;
+  color: var(--colorPrimero);
+}
+th,
+td {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+@media (max-width: 990px){
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 7px;
+    padding: 0;
+  }
+  th {
+    border: 1px solid var(--colorPrimero);
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 0.7em;
+    color: var(--colorPrimero);
+  }
+  td {
+    text-align: center;
+    font-size: 0.7em;
+  }
+}

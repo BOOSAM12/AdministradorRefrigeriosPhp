@@ -1,0 +1,595 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+10&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+:root {
+  --colorPrimero: #3f50d1;
+  --colorSegundo: #5c67dd;
+  --colorTercero: #787ee8;
+  --colorCuarto: #9594f4;
+  --colorCinco: #b1abff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  height: 100%;
+  width: 100%;
+}
+/* estilos de la barra de navegacion */
+/* @media(max-width:990px){ */
+/* img{ */
+/* display: flex; */
+/* justify-content: center; */
+/* align-items: center; */
+/* flex-direction: row;     */
+/* } */
+/* .cont-titulo-nav{ */
+/* display: block; */
+/* border-radius: 38px 96px 74px 44px / 83px 35px 86px 78px;  */
+/* margin-right: 20px; */
+/*  */
+/* background-color: #567070; */
+/* } */
+/* .cont-titulo-nav h1{ */
+/* font-size: 25px; */
+/* text-align: center; */
+/* color:#035153; */
+/* padding:0 15px 0 15px; */
+/*  */
+/* } */
+/* .barra{ */
+/* display: block; */
+/* cursor: pointer; */
+/* } */
+/* .barra .linea{ */
+/* width: 30px; */
+/* height: 3px; */
+/* background-color: black; */
+/* margin: 6px 0px; */
+/* } */
+/* .nav-bar{ */
+/* height: 0px; */
+/* position: absolute; */
+/* top: 55px; */
+/* left: 15vw; */
+/* right: 15vw; */
+/* width: 70vw; */
+/* background-color: rgba(128, 128, 128, 0.321); */
+/* transition: 0.5s; */
+/* overflow: hidden; */
+/*  */
+/*  */
+/* } */
+/* .nav-bar.active{ */
+/* height: 350px; */
+/* } */
+/* .nav-bar ul{ */
+/* display: block; */
+/* width: fit-c5ontent; */
+/* margin: auto; */
+/* text-align: center; */
+/* transition: 0.5s; */
+/* opacity: 0; */
+/* padding-left: 0; */
+/* } */
+/* .nav-bar.active ul{ */
+/* opacity: 1; */
+/* } */
+/* .nav-bar li { */
+/* margin-bottom: 20px; */
+/* }                                   */
+/* } */
+
+/* INICIA EL MAIN */
+main {
+  width: 100%;
+  height: 93.5%;
+}
+
+.cont-acordeon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: #ffffff;
+  background-image: url(../img/fondoadiminstrador2.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.acordeon {
+  width: 50%;
+}
+.acordeon label:hover {
+  background-color: #1c1c20;
+}
+.acordeon label {
+  font-size: 1.5em;
+  width: 100%;
+  display: block;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: #000000;
+  color: white;
+}
+
+.cont-parrafo span {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.8em;
+}
+.cont-parrafo {
+  font-size: 1.3em;
+  text-align: justify;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 400ms ease-in-out;
+  background-color: rgba(194, 194, 194, 0.5);
+  border-radius: 15px;
+}
+.icono:checked ~ .cont-parrafo {
+  max-height: 600px;
+  padding: 20px;
+  grid-row: span 2;
+}
+
+.icono {
+  display: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0.5em;
+}
+th {
+  border: 2px solid var(--colorPrimero);
+  padding: 5px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 15px;
+  color: var(--colorPrimero);
+}
+td {
+  text-align: center;
+  font-size: 0.8em;
+}
+img {
+  width: 28px;
+  transition: all 300ms ease;
+  cursor: pointer;
+}
+img:hover {
+  scale: 1.1;
+}
+
+.btn-usuario {
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 0.7em;
+  cursor: pointer;
+  background-color: var(--colorSegundo);
+  color: white;
+  border: none;
+  transition: all 300ms ease;
+}
+.btn-usuario:hover {
+  scale: 1.05;
+  box-shadow: 0px 0px 10px var(--colorSegundo);
+}
+
+/* DISEÑO FORMULARIO DE USUARIO */
+.cont-form-usuario{
+ width: 100%;
+  height: 89.8%;
+  position: absolute;
+  backdrop-filter: blur(10px);
+  z-index: 3;
+  display: none;
+}
+.cont-form-usuario form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 450px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 30px 30px 40px #373737, -20px -20px 50px #ffffff;
+  padding: 20px;
+}
+.cont-form-usuario h2 {
+  font-size: 1.9em;
+  color: var(--colorPrimero);
+  margin-bottom: 40px;
+}
+.cont-horas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.445);
+  border-radius: 15px;
+  padding: 10px;
+}
+.cont-hora label,
+.cont-cantidad label,
+.cont-producto label {
+  font-size: 1em;
+  font-weight: bolder;
+}
+.cont-hora,
+.cont-cantidad,
+.cont-producto {
+  text-align: center;
+}
+.cont-hora input,
+.cont-cantidad input,
+.cont-producto select {
+  width: 90%;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid rgb(0, 0, 0, 0.445 );
+  margin: 10px;
+}
+
+.cont-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.445);
+  border-radius: 15px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.cont-btn {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.cont-btn .btn-guardar,
+.btn-salir {
+  width: 45%;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+.btn-guardar {
+  background-color: var(--colorPrimero);
+  color: white;
+}
+.btn-guardar:hover {
+  scale: 1.1;
+  box-shadow: 0px 0px 10px var(--colorSegundo);
+}
+.btn-salir {
+  background-color: red;
+  color: white;
+}
+.btn-salir:hover {
+  scale: 1.1;
+  box-shadow: 0px 0px 10px rgb(255, 80, 80);
+}
+
+
+/* DISEÑO FORMULARIO DE PRODUCTOS*/
+.cont-form-producto{
+    width: 100%;
+     height: 89.8%;
+     position: absolute;
+     backdrop-filter: blur(10px);
+     z-index: 3;
+     display: none;
+   }
+   .cont-form-producto form {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     width: 400px;
+     height: 450px;
+     background-color: white;
+     border-radius: 20px;
+     box-shadow: 30px 30px 40px #373737, -20px -20px 50px 
+   #ffffff;
+     padding: 20px;
+   }
+   .cont-form-producto h2 {
+     font-size: 1.9em;
+     color: var(--colorPrimero);
+     margin-bottom: 40px;
+   }
+   .cont-horas {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+     width: 100%;
+     border: 1px solid rgba(0, 0, 0, 0.445);
+     border-radius: 15px;
+     padding: 10px;
+   }
+   .cont-hora label,
+   .cont-cantidad label,
+   .cont-producto label {
+     font-size: 1em;
+     font-weight: bolder;
+   }
+   .cont-hora,
+   .cont-cantidad,
+   .cont-producto {
+     text-align: center;
+   }
+   .cont-hora input,
+   .cont-cantidad textarea,
+   .cont-producto select {
+     width: 90%;
+     height: 30px;
+     border-radius: 5px;
+     border: 1px solid rgb(0, 0, 0, 0.445 );
+     margin: 10px;
+     padding: 5px;
+   }
+   
+   .cont-info {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+     width: 100%;
+     border: 1px solid rgba(0, 0, 0, 0.445);
+     border-radius: 15px;
+     padding: 10px;
+     margin-top: 20px;
+   }
+   
+   .cont-btn {
+     margin-top: 20px;
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+   }
+   .cont-btn .btn-guardar,
+   .btn-salir {
+     width: 45%;
+     padding: 10px;
+     border-radius: 10px;
+     font-size: 1em;
+     font-weight: bold;
+     border: none;
+     cursor: pointer;
+     transition: all 300ms ease;
+   }
+   .btn-guardar {
+     background-color: var(--colorPrimero);
+     color: white;
+   }
+   .btn-guardar:hover {
+     scale: 1.1;
+     box-shadow: 0px 0px 10px var(--colorSegundo);
+   }
+   .btn-salir {
+     background-color: red;
+     color: white;
+   }
+   .btn-salir:hover {
+     scale: 1.1;
+     box-shadow: 0px 0px 10px rgb(255, 80, 80);
+   }
+
+/* DISEÑO DE FORMULARIO DE GRADO */
+/* DISEÑO FORMULARIO DE PRODUCTOS*/
+.cont-form-producto{
+    width: 100%;
+     height: 89.8%;
+     position: absolute;
+     backdrop-filter: blur(10px);
+     z-index: 3;
+     display: none;
+   }
+   .cont-form-producto form {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     width: 400px;
+     height: 450px;
+     background-color: white;
+     border-radius: 20px;
+     box-shadow: 30px 30px 40px #373737, -20px -20px 50
+   #ffffff;
+     padding: 20px;
+   }
+   .cont-form-producto h2 {
+     font-size: 1.9em;
+     color: var(--colorPrimero);
+     margin-bottom: 40px;
+   }
+   .cont-horas {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+     width: 100%;
+     border: 1px solid rgba(0, 0, 0, 0.445);
+     border-radius: 15px;
+     padding: 10px;
+   }
+   .cont-hora label,
+   .cont-cantidad label,
+   .cont-producto label {
+     font-size: 1em;
+     font-weight: bolder;
+   }
+   .cont-hora,
+   .cont-cantidad,
+   .cont-producto {
+     text-align: center;
+   }
+   .cont-hora input,
+   .cont-cantidad input,
+   .cont-producto select {
+     width: 90%;
+     height: 30px;
+     border-radius: 5px;
+     border: 1px solid rgb(0, 0, 0, 0.445 );
+     margin: 10px;
+     padding: 5px;
+   }
+   .cont-cantidad{
+    width: 100%;
+   }
+   .cont-info {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+     width: 100%;
+     border: 1px solid rgba(0, 0, 0, 0.445);
+     border-radius: 15px;
+     padding: 10px;
+     margin-top: 20px;
+   }
+   
+   .cont-btn {
+     margin-top: 20px;
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+   }
+   .cont-btn .btn-guardar,
+   .btn-salir {
+     width: 45%;
+     padding: 10px;
+     border-radius: 10px;
+     font-size: 1em;
+     font-weight: bold;
+     border: none;
+     cursor: pointer;
+     transition: all 300ms ease;
+   }
+   .btn-guardar {
+     background-color: var(--colorPrimero);
+     color: white;
+   }
+   .btn-guardar:hover {
+     scale: 1.1;
+     box-shadow: 0px 0px 10px var(--colorSegundo);
+   }
+   .btn-salir {
+     background-color: red;
+     color: white;
+   }
+   .btn-salir:hover {
+     scale: 1.1;
+     box-shadow: 0px 0px 10px rgb(255, 80, 80);
+   }
+
+
+
+@media (max-width: 990px) {
+  main{
+    height: 93%;
+  }
+  .cont-acordeon {
+    display:flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    background-image: url(../img/fondoAdministracionCelular.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .acordeon {
+    width: 80%;
+  }
+  .acordeon label {
+    font-size: 1.2em;
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  .cont-parrafo span {
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.8em;
+  }
+  .cont-parrafo {
+    font-size: 1em;
+    transition: all 400ms ease;
+  }
+  .icono:checked ~ .cont-parrafo {
+    max-height: 210px;
+    padding: 10px;
+  }
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0.5em;
+  }
+  th {
+    border: 2px solid var(--colorPrimero);
+    padding: 5px;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 15px;
+    color: var(--colorPrimero);
+  }
+  td {
+    text-align: center;
+    font-size: 0.8em;
+  }
+  img {
+    width: 16px;
+    transition: all 300ms ease;
+    cursor: pointer;
+  }
+  img:hover {
+    scale: 1.1;
+  }
+  .cont-form-usuario form{
+    width: 350px;
+  }
+  .cont-form-producto form{
+    width: 350px;
+
+  }
+
+}

@@ -1,0 +1,665 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+10&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+:root {
+  --colorPrimero: #3f50d1;
+  --colorSegundo: #5c67dd;
+  --colorTercero: #787ee8;
+  --colorCuarto: #9594f4;
+  --colorCinco: #b1abff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  height: 100%;
+  width: 100%;
+
+}
+/* INICIA EL MAIN */
+main {
+  width: 100%;
+  height: 100%;
+}
+/* estilos del banner */
+.banner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(177, 171, 255);
+  background: linear-gradient(
+    143deg,
+    rgba(177, 171, 255, 1) 0%,
+    rgba(149, 148, 244, 0.31976540616246496) 70%
+  );
+}
+.banner .cont-frase h2 {
+  font-size: 3.7em;
+  width: 500px;
+  margin: 30px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+.banner h3 {
+  display: none;
+}
+.cont-frase {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.btn-accion {
+  background-image: linear-gradient(
+    144deg,
+    var(--colorPrimero),
+    var(--colorSegundo) 50%,
+    var(--colorTercero)
+  );
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 0px 0px 20px var(--colorPrimero);
+  color: #ffffff;
+  font-size: 23px;
+  display: flex;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-accion:active,
+.btn-accion:hover {
+  outline: 0;
+}
+
+.btn-accion span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.btn-accion:hover span {
+  background: none;
+}
+
+.btn-accion:active {
+  transform: scale(0.9);
+  box-shadow: 0px 0px 30px var(--colorSegundo);
+}
+.slider{
+  width: 550px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-right: 50px;
+}
+.slider ul{
+  display: flex;
+  padding: 0;
+  width: 400%;
+  animation: slide 12s infinite alternate ease-in-out;
+
+
+}
+.slider li {
+  width: 100%;
+  list-style: none;
+}
+.slider img{
+  width: 100%;
+}
+/* animacion para el slider */
+@keyframes slide{
+  0% {margin-left: 0%;}
+  20% {margin-left: 0%;}
+
+  25% {margin-left: -100%;}
+  45% {margin-left: -100%;}
+
+  50% {margin-left: -200%;}
+  70% {margin-left: -200%;}
+  
+  75% {margin-left: -300%;}
+  100% {margin-left: -300%;}
+}
+
+
+
+/* empieza el apartado del acordeon */
+.cont-acordeon{
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 500px 500px;
+  align-items: center;
+  place-content: center;
+  gap: 20px;
+  background-color: #ffffff;
+  background-image: url(../img/fondo-acordeon.svg);
+  background-repeat:no-repeat ;
+  background-size: cover;
+}
+.acordeon{
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 20px;
+
+}
+.acordeon label:hover{
+  background-color: #1c1c20;
+}
+.acordeon label{
+  font-size: 1.8em;
+  width: 100%;
+  display: block;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #000000;
+  color: white;
+}
+
+.cont-parrafo span{
+  font-family: "Jersey 10", 
+  sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.8em;
+}
+.cont-parrafo {
+  font-size: 1.3em;
+  text-align: justify;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 400ms ease-in-out;
+}
+ .icono:checked ~ .cont-parrafo{
+  max-height: 600px;
+  padding: 20px;
+  grid-row: span 2;
+}
+
+.icono{
+  display:none ;
+}
+
+
+
+
+
+/* realizacion del footer */
+footer{
+  width: 100%;
+  height: 100px;
+  background-color: var(--colorPrimero);
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+
+}
+.redes{
+ margin-left: 50px;
+
+}
+.redes img{
+  width: 40px;
+  cursor: pointer;
+  margin-right: 15px;
+  transition: all 300ms ease;
+}
+.redes img:hover{
+  scale: 1.2;
+}
+.contactanos{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.contactanos h3{
+  color: white;
+  font-size:1.5em;
+}
+.info-contactanos, .info-contactanos1{
+  display: flex;
+  flex-direction: column;
+}
+.info-contactanos1{
+  margin-right: 50px
+}
+.info-contactanos1 span{
+  font-family: "Jersey 10", 
+  sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.8em;
+  color: white;
+}
+.info-contactanos p{
+  color: white;
+  font-size: 1em;
+}
+.info-contactanos span{
+  font-weight: bolder
+}
+
+@media (max-width: 1024px) {
+
+  .btn-nav {
+    width: 8em;
+    position: relative;
+    height: 2.5em;
+    border: 3px ridge var (--colorPrimero);
+    outline: none;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+.banner h2 {
+  display: none;
+}
+.banner h3 {
+  display: block;
+  font-size: 3em;
+  width: 400px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  transition: all 300ms ease-in;
+}
+.slider {
+  width: 350px;
+  margin: 50px 50px 0px 0px;
+}
+
+.cont-acordeon {
+  grid-template-columns: 400px 400px;
+  background-image: url(../img/fondo-celular.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.acordeon {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+.acordeon label {
+  font-size: 1.7em;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.cont-parrafo span {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.8em;
+}
+.cont-parrafo {
+  font-size: 1.3em;
+  transition: all 400ms ease;
+}
+.icono:checked ~ .cont-parrafo {
+  max-height: 270px;
+  padding: 8px;
+}
+}
+
+@media (max-width: 768px) {
+  .btn-nav {
+    width: 10em;
+    position: relative;
+    height: 2.5em;
+    border: 3px ridge var (--colorPrimero);
+    outline: none;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  .barra {
+    display: block;
+    cursor: pointer;
+  }
+
+  .barra .linea {
+    width: 30px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    margin: 6px 6px 6px 0px;
+  }
+  .nav-bar {
+    height: 0px;
+    position: fixed;
+    top: 60px;
+    width: 100vw;
+    background-color: rgb(0, 0, 0);
+    transition: 0.5s;
+    overflow: hidden;
+    z-index: 10;
+  }
+  .nav-bar.active {
+    height: 300px;
+  }
+  .nav-bar ul {
+    display: block;
+    width: fit-c5ontent;
+    margin: auto;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+    padding-left: 0;
+  }
+  .nav-bar.active ul {
+    opacity: 1;
+  }
+  .nav-bar li {
+    margin-bottom: 20px;
+  }
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.banner h2 {
+  display: none;
+}
+.banner h3 {
+  display: block;
+  font-size: 2.5em;
+  width: 400px;
+  margin: 30px 30px 45px 30px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  transition: all 300ms ease-in;
+}
+.slider {
+  width: 350px;
+  margin: 50px 0px 0px 0px;
+}
+
+.cont-acordeon {
+  display: grid;
+  grid-template-columns: 450px;
+  grid-template-rows: auto;
+  gap: 0px;
+  background-color: #ffffff;
+  background-image: url(../img/fondo-celular.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.acordeon {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+.acordeon label {
+  font-size: 1.2em;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.cont-parrafo span {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.8em;
+}
+.cont-parrafo {
+  font-size: 1.2em;
+  transition: all 400ms ease;
+}
+.icono:checked ~ .cont-parrafo {
+  max-height: 210px;
+  padding: 10px;
+}
+footer {
+  width: 100%;
+  height: 150px;
+  background-color: var(--colorPrimero);
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.redes {
+  margin-left: 30px;
+}
+.redes img {
+  width: 35px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+}
+
+@media (max-width: 435px) {
+  main{
+    width: 100vw;
+  }
+  .btn-nav {
+    width: 10em;
+    position: relative;
+    height: 2.5em;
+    border: 3px ridge var (--colorPrimero);
+    outline: none;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  .barra {
+    display: block;
+    cursor: pointer;
+  }
+
+  .barra .linea {
+    width: 30px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    margin: 6px 6px 6px 0px;
+  }
+  .nav-bar {
+    height: 0px;
+    position: fixed;
+    top: 60px;
+    width: 100vw;
+    background-color: rgb(0, 0, 0);
+    transition: 0.5s;
+    overflow: hidden;
+    z-index: 10;
+  }
+  .nav-bar.active {
+    height: 300px;
+  }
+  .nav-bar ul {
+    display: block;
+    width: fit-c5ontent;
+    margin: auto;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+    padding-left: 0;
+  }
+  .nav-bar.active ul {
+    opacity: 1;
+  }
+  .nav-bar li {
+    margin-bottom: 20px;
+  }
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+
+}
+.banner h2 {
+  display: none;
+}
+.banner h3 {
+  display: block;
+  font-size: 2.2em;
+  width: 350px;
+  margin: 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  transition: all 300ms ease-in;
+}
+.cont-frase a{
+  margin-top: 20px;
+}
+.btn-accion {
+  font-size: 1em;
+}
+
+.slider {
+  width: 300px;
+  margin: 20px 0px 0px 0px;
+}
+
+.cont-acordeon {
+  display: grid;
+  grid-template-columns: 400px;
+  grid-template-rows: auto;
+  background-color: #ffffff;
+  background-image: url(../img/fondo-celular.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.acordeon {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+.acordeon label {
+  font-size: 1.2em;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.cont-parrafo span {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.8em;
+}
+.cont-parrafo {
+  font-size: 1em;
+  transition: all 400ms ease;
+}
+.icono:checked ~ .cont-parrafo {
+  max-height: 210px;
+  padding: 8px;
+}
+footer {
+  width: 100%;
+  height: 150px;
+  background-color: var(--colorPrimero);
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.redes {
+  margin-left: 30px;
+}
+.redes img {
+  width: 35px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.contactanos {
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-right: 30px;
+}
+.contactanos h3 {
+  color: white;
+  font-size: 1.2em;
+}
+.info-contactanos,
+.info-contactanos1 {
+  display: flex;
+  flex-direction: column;
+}
+.info-contactanos1 {
+  margin-right: 50px;
+  margin-bottom: 10px;
+}
+.info-contactanos1 span {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5em;
+  color: white;
+}
+.info-contactanos p {
+  color: white;
+  font-size: 1em;
+}
+.info-contactanos span {
+  font-weight: bolder;
+  font-size: 0.9em;
+}
+}

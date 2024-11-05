@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+10&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+:root {
+  --colorPrimero: #3f50d1;
+  --colorSegundo: #5c67dd;
+  --colorTercero: #787ee8;
+  --colorCuarto: #9594f4;
+  --colorCinco: #b1abff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  height: 100%;
+  width: 100%;
+}
+main {
+  width: 100%;
+  height: 90.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cont-formulario {
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+.formulario {
+  border-bottom: 2px solid black;
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.cont-filtro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.cont-filtro img {
+  width: 40px;
+}
+.cont-filtro input {
+  width: 250px;
+  height: 40px;
+  margin-left: 20px;
+  border-radius: 10px;
+  border: 2px solid black;
+  padding: 10px;
+}
+.cont-btns{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cont-btns label{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+.cont-btns select {
+    width: 90%;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 5px;
+  }
+
+/* DISEÑO DE LA TABLA */
+table {
+    width: 100%;
+    padding: 20px;
+    border-collapse: separate;
+    border-spacing: 15px;
+  }
+  th {
+    border: 1px solid var(--colorPrimero);
+    padding: 10px;
+    border-radius: 15px;
+    color: var(--colorPrimero);
+  }
+  th,
+  td {
+    text-align: center;
+    font-size: 1.2em;
+  }
+
+  @media (max-width: 1024px) {
+    .formulario{
+      padding: 10px;
+    }
+    .cont-filtro img {
+      width: 20px;
+    }
+    .cont-filtro input {
+      width: 150px;
+      height: 40px;
+      margin-left: 10px;
+      border-radius: 10px;
+      font-size: 0.6em;
+    }
+    .button {
+      padding: 0.5em 1em;
+      border-radius: 0.5em;
+      font-size: 1em;
+    }
+    
+    .button p{
+      font-size: 0.8em;
+    }
+    .button::after,
+    .button::before {
+      content: "";
+      position: absolute;
+      width: 6.14em;
+      aspect-ratio: 1;
+      background: var(--colorPrimero);
+      opacity: 70%;
+      transition: transform 500ms, background 
+    }
+    
+    .button::before {
+      left: 0;
+      transform: translateX(-7em);
+    }
+    
+    .button::after {
+      right: 0;
+      transform: translateX(7em);
+    }
+    table {
+      width: 100%;
+      padding: 5px;
+      border-collapse: separate;
+      border-spacing: 15px;
+    }
+    th {
+      border: 1px solid var(--colorPrimero);
+      padding: 5px;
+      border-radius: 10px;
+      color: var(--colorPrimero);
+      font-size: 0.7em;
+
+    }
+    td {
+      text-align: center;
+      font-size: 0.8em;
+    }
+    .cont-btns label{
+        font-size: 0.8em;
+        font-weight: 600;
+    }
+    .cont-btns select {
+        width: 60%;
+        height: 20px;
+        margin-top: 10px;
+      }
+  }
+
+  @media (max-width: 435px){
+    .formulario {
+      border-bottom: 2px solid black;
+      width: 100%;
+      margin-bottom: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px;
+    }
+    .cont-filtro img {
+      width: 15px;
+    }
+    .cont-filtro input {
+      width: 100px;
+      height: 25px;
+      margin-left: 10px;
+      border-radius: 10px;
+      font-size: 0.6em;
+    }
+    .filtro-producto{
+      width: 40%;
+    }
+    .cont-btns{
+      display: flex;
+      justify-content: right;
+      align-items: center;
+  }
+  
+  .filtro-producto label{
+      font-size: 0.7em;
+      font-weight: 600;
+  }
+  .filtro-producto select {
+      width: 80%;
+      height: 20px;
+      margin-top: 5px;
+      border-radius: 10px;
+      padding: 5px;
+    }
+    table {
+      width: 100%;
+      padding: 0;
+      border-collapse: separate;
+      border-spacing: 5px;
+    }
+    th {
+      color: var(--colorPrimero);
+      border: none;
+      padding: 0px;
+  
+  
+    }
+    th,
+    td {
+      text-align: center;
+      font-size: 0.7em;
+    }
+  }
