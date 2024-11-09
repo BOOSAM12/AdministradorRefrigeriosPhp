@@ -35,27 +35,27 @@
         </nav>
     </header>
     <main>
-        <form class="form animate__animated animate__fadeInDown" action="../controllers/UserController.php" method="post">
+        <form class="form animate__animated animate__fadeInDown" action="../controllers/UserController.php" method="post" onsubmit="validarFormulario(event)">
             <p class="title">Crea tú cuenta</p>
                 <div class="flex">
                 <label>
-                    <input class="input" type="text" placeholder="" required name="nombre">
+                    <input class="input" type="text" placeholder="" required name="nombre" id="nombre">
                     <span>Nombre</span>
                 </label>
         
                 <label>
-                    <input class="input" type="text" placeholder="" required name="apellidos">
+                    <input class="input" type="text" placeholder="" required name="apellidos" id="apellidos">
                     <span>Apellidos</span>
                 </label>
             </div>  
                     
             <label>
-                <input class="input" type="email" placeholder="" required name="email">
+                <input class="input" type="email" placeholder="" required name="email" id="email">
                 <span>Email</span>
             </label> 
                 
             <label>
-                <input class="input" type="password" placeholder="" required name="contrasena">
+                <input class="input" type="password" placeholder="" required name="contrasena" id="contrasena">
                 <span>Contraseña</span>
             </label>
             <input type="submit" class="submit" value="Registrar cuenta" name="enviarRegistro"></input>
@@ -65,4 +65,5 @@
     </main>
 </body>
 <script src="../source/js/nav.js"></script>
+<script src="../source/js/validacionRegistro.js"></script>
 </html>

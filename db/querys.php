@@ -29,7 +29,6 @@ class Querys{
             if ($result->num_rows > 0) {
                 return true;
             }else{
-                echo "<script>alert('Los datos ingresados no concuerdan con ningun usuario');</script>";
                 return false;
             }
         } catch (Exception $e){

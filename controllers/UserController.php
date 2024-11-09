@@ -23,7 +23,6 @@ class User {
                     if (preg_match($validateEmail, $email) && preg_match($validatePass, $contrasena)) {
                         if ($Querys->emailExists($email)) {
                             echo "<script>alert('El correo ingresado ya ha sido registrado anteriormente');</script>";
-
                             header('Location: ../views/registro.php');
                             exit();
                         } else {
@@ -34,10 +33,7 @@ class User {
                         }
         
                     } else {
-                        echo "<script>alert('La contraseña es incorrecta, debe incluir al menos 8 caracteres incluyendo mayúsculas, minúsculas, y caracteres especiales');</script>";
-                        header('Location: ../views/registro.php');
-                        exit();
-
+                        include_once '../views/registro.php';
                     }
 
                 } catch (Exception $e) {
@@ -64,9 +60,7 @@ class User {
                     exit();
                 } else {
                     echo "<script>alert('Error al iniciar sesión');</script>";
-                    header('location: ../views/inicioSesion.php'); 
-                    exit();
-
+                    include_once '../views/inicioSesion.php';
                 }
             } else {
                 echo "<script>alert('Por favor completa todos los campos');</script>";
